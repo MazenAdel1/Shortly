@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+  </head>
+
+  <body class="overflow-x-hidden">
+    <header
+      class="container d-flex justify-content-between py-4 align-items-center position-relative"
+    >
+      <div class="d-flex align-items-center gap-4">
+        <div class="pe-3"><img src="./images/logo.svg" alt="Shortly" /></div>
+        <div class="d-md-flex d-none gap-4">
+          <a
+            href="#"
+            class="text-decoration-none grayish-violet fw-medium transition"
+          >
+            Features
+          </a>
+          <a
+            href="#"
+            class="text-decoration-none grayish-violet fw-medium transition"
+          >
+            Pricing
+          </a>
+          <a
+            href="#"
+            class="text-decoration-none grayish-violet fw-medium transition"
+          >
+            Resources
+          </a>
+        </div>
+      </div>
+      <div class="d-md-flex d-none align-items-center gap-4">
+        <a
+          href="#"
+          class="text-decoration-none grayish-violet fw-medium transition"
+          >Login</a
+        >
+        <a
+          href="#"
+          class="text-decoration-none primary-bg-cyan text-white px-4 py-2 rounded-pill fw-medium hovered-cyan transition"
+          >Sign Up</a
+        >
+      </div>
+
+      <i class="fa-solid fa-bars d-md-none d-block bar-icon grayish-violet"></i>
+
+      <div
+        class="mobile-menu position-absolute top-100 d-flex d-none flex-column primary-bg-black rounded-3 align-items-center px-3 py-4 d-md-none"
+      >
+        <ul
+          class="list-unstyled d-flex flex-column align-items-center gap-3 m-0"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-decoration-none grayish-violet fw-medium transition text-white"
+            >
+              Features
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-decoration-none grayish-violet fw-medium transition text-white"
+            >
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-decoration-none grayish-violet fw-medium transition text-white"
+            >
+              Resources
+            </a>
+          </li>
+        </ul>
+
+        <hr class="w-100 my-3 grayish-violet" />
+
+        <div class="d-flex flex-column align-items-center gap-2 w-100">
+          <a
+            href="#"
+            class="text-decoration-none grayish-violet fw-medium transition text-white"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none primary-bg-cyan text-white px-4 py-1 d-block w-100 rounded-pill fw-medium hovered-cyan transition text-center"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="d-flex align-items-center justify-content-between container flex-lg-row flex-column-reverse landing gap-4 text-center"
+    >
+      <div class="d-flex flex-column align-items-center align-items-lg-start">
+        <h1 class="fw-bold text-lg-start text-center">
+          More than just shorter links
+        </h1>
+        <p class="grayish-violet text-lg-start text-center">
+          Build your brand’s recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <a
+          href="#"
+          class="text-decoration-none text-white primary-bg-cyan get-started rounded-pill fw-bold hovered-cyan transition"
+          >Get Started</a
+        >
+      </div>
+      <div
+        class="w-lg-100 w-50 landing-img d-flex align-items-center justify-content-center"
+      >
+        <img src="./images/illustration-working.svg" alt="working" />
+      </div>
+    </section>
+
+    <section class="grayish-violet-bg statics-container position-relative">
+      <div
+        class="container shorten p-5 rounded-2 d-flex gap-3 flex-column flex-md-row position-absolute"
+      >
+        <input
+          type="text"
+          placeholder="Shorten a link here..."
+          class="rounded-2 px-4 fw-medium py-3 position-relative"
+        />
+        <i class="warning-red position-absolute warning-message d-none"
+          >Please add a link</i
+        >
+        <button
+          class="rounded-2 text-white primary-bg-cyan px-4 fw-bold hovered-cyan transition py-3 border-0 shorten-button"
+        >
+          Shorten It!
+        </button>
+      </div>
+      <div class="shorten-links w-100 d-flex flex-column gap-3 container"></div>
+      <div class="statics container d-flex flex-column align-items-center">
+        <div class="head text-center d-flex flex-column align-items-center">
+          <h2 class="very-dark-violet fw-bold statics-head">
+            Advanced Statistics
+          </h2>
+          <p class="grayish-violet statics-p">
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+        <div
+          class="d-flex flex-column flex-lg-row gap-5 position-relative statics-cards-container"
+        >
+          <div class="statics-card bg-white rounded-3 position-relative z-3">
+            <div
+              class="rounded-pill primary-bg-black d-flex justify-content-center align-items-center position-absolute"
+            >
+              <img src="./images/icon-brand-recognition.svg" alt="" />
+            </div>
+            <h3 class="fw-bold pb-2 text-center text-lg-start">
+              Brand Recognition
+            </h3>
+            <p class="grayish-violet text-center text-lg-start">
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <div class="statics-card bg-white rounded-3 position-relative z-3">
+            <div
+              class="rounded-pill primary-bg-black d-flex justify-content-center align-items-center position-absolute"
+            >
+              <img src="./images/icon-detailed-records.svg" alt="" />
+            </div>
+            <h3 class="fw-bold pb-2 text-center text-lg-start">
+              Detailed Records
+            </h3>
+            <p class="grayish-violet text-center text-lg-start">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <div class="statics-card bg-white rounded-3 position-relative z-3">
+            <div
+              class="rounded-pill primary-bg-black d-flex justify-content-center align-items-center position-absolute"
+            >
+              <img src="./images/icon-fully-customizable.svg" alt="" />
+            </div>
+            <h3 class="fw-bold pb-2 text-center text-lg-start">
+              Fully Customizable
+            </h3>
+            <p class="grayish-violet text-center text-lg-start">
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="boost d-flex flex-column align-items-center justify-content-center gap-sm-4 gap-2"
+    >
+      <h2 class="text-white fw-bold text-center">Boost your links today</h2>
+      <a
+        href="#"
+        class="text-decoration-none text-white primary-bg-cyan get-started rounded-pill fw-bold hovered-cyan transition"
+        >Get Started</a
+      >
+    </section>
+
+    <footer class="very-dark-violet-bg">
+      <div class="container">
+        <div
+          class="row row-cols-md-12 row-cols-1 text-md-start text-center gap-3 gap-md-0"
+        >
+          <div class="footer-logo col-md-3">
+            <img src="./images/logo.svg" alt="Shortly" />
+          </div>
+          <div
+            class="col-md-6 d-flex flex-column flex-md-row links-container justify-content-md-end justify-content-center"
+          >
+            <div>
+              <h4 class="text-white pb-2 fw-bold">Features</h4>
+              <ul class="p-0">
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                  >
+                    Link Shortening
+                  </a>
+                </li>
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Branded Links</a
+                  >
+                </li>
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Analytics</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white pb-2 fw-bold">Resources</h4>
+              <ul class="p-0">
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Blog</a
+                  >
+                </li>
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Developers</a
+                  >
+                </li>
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white pb-2 fw-bold">Company</h4>
+              <ul class="p-0">
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >About</a
+                  >
+                </li>
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Our Team</a
+                  >
+                </li>
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Careers</a
+                  >
+                </li>
+                <li class="list-unstyled py-1">
+                  <a
+                    href="#"
+                    class="text-decoration-none neutral-gray footer-link transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-md-3 d-flex flex-wrap gap-lg-4 gap-3 justify-content-md-end justify-content-center"
+          >
+            <a href="#" class="footer-social-icon transition"
+              ><img src="./images/icon-facebook.svg" alt="facebook"
+            /></a>
+            <a href="#" class="footer-social-icon transition"
+              ><img src="./images/icon-twitter.svg" alt="twitter"
+            /></a>
+            <a href="#" class="footer-social-icon transition"
+              ><img src="./images/icon-pinterest.svg" alt="pinterest"
+            /></a>
+            <a href="#" class="footer-social-icon transition"
+              ><img src="./images/icon-instagram.svg" alt="instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
