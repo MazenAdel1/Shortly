@@ -1,6 +1,6 @@
 # Shorten API
 
-const apiUrl = `https://is.gd/create.php?format=json&url=${encodeURIComponent(TheURL)}
+const apiUrl = `https://is.gd/create.php?format=json&url=${encodeURIComponent(TheURL)}`
 
 fetch(apiUrl)
     .then((response) => response.json())
@@ -9,4 +9,3 @@ fetch(apiUrl)
         const shortenedUrl = data.shorturl; // the result 
         }
       }
-      
